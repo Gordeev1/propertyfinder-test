@@ -137,7 +137,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.propertyfindertest"
+        applicationId "com.propertyfinder.test"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
