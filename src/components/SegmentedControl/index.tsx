@@ -13,6 +13,7 @@ export default function SegmentedControl<T extends string>({
 	items,
 	disabled,
 }: IProps<T>) {
+	/* eslint-disable-next-line react-hooks/exhaustive-deps */
 	const handleChange = useCallback((nextValue: string) => onChange(nextValue as T), [onChange]);
 
 	return (
