@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { useSelector } from 'react-redux';
-import { NavigationContainer } from '@react-navigation/native';
+import { LinkingOptions, NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Icon } from 'react-native-elements';
 import { Host } from 'react-native-portalize';
@@ -11,7 +11,9 @@ import SettingsScreen from '@scenes/Settings';
 import ProfileScreen from '@scenes/Profile';
 import NavigationService from '@services/navigation';
 import styled from '@utils/styled-components';
+import { APP_SCHEME } from '@constants';
 import { MAIN_TABS } from './enums';
+import { SEARCH_SCENES } from './search/enums';
 
 interface ITabBarIconProps {
 	focused: boolean;
@@ -32,6 +34,22 @@ const ConfiguredTabsNavigator = styled(Tabs.Navigator).attrs((p) => ({
 		},
 	},
 }))``;
+
+const linking: LinkingOptions = {
+	prefixes: [APP_SCHEME],
+	config: {
+		screens: {
+			[MAIN_TABS.Search]: {
+				initialRouteName: SEARCH_SCENES.Main,
+				screens: {
+					[SEARCH_SCENES.MovieDetails]: 'movies/:id',
+				},
+			},
+			[MAIN_TABS.Settings]: 'settings',
+			[MAIN_TABS.Profile]: 'profile',
+		},
+	},
+};
 
 export default () => {
 	const authorized = useSelector(selectUserAuthorized);
@@ -64,7 +82,7 @@ export default () => {
 	);
 
 	return (
-		<NavigationContainer ref={NavigationService.setNavigation}>
+		<NavigationContainer linking={linking} ref={NavigationService.setNavigation}>
 			<Host>
 				<ConfiguredTabsNavigator>
 					<Tabs.Screen
