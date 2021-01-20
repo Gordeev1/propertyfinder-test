@@ -42,11 +42,24 @@ const lightTheme = { ...baseTheme };
 
 const darkTheme = merge({}, baseTheme, {
 	colors: {
+		fontMain: 'white',
+		fontSecondary: 'rgb(83, 97, 127)',
+		border: 'rgb(25, 28, 34)',
+		shadow: 'rgba(83, 97, 127, 0.3)',
 		background: 'rgb(0, 0, 0)',
+		searchHeader: 'rgb(19, 21, 25)',
+		inputColor: 'rgb(25, 27, 36)',
+		stackHeader: 'rgb(19, 21, 25)',
+		stackHeaderBorder: 'rgb(22, 23, 29)',
 		activeTint: 'rgb(254, 254, 254)',
 		inactiveTint: 'rgb(89, 94, 98)',
 		tabBar: 'rgb(19, 21, 25)',
 		tabBarBorder: 'rgb(22, 23, 29)',
+		cardBackground: 'rgb(18, 19, 28)',
+		movieDetailsOverlayFrom: 'rgba(0, 0, 0, 1)',
+		movieDetailsOverlayTo: 'rgba(0, 0, 0, 0)',
+		segmentedControlTextColor: 'rgb(83, 97, 127)',
+		segmentedControlTintColor: 'rgb(83, 97, 127)',
 	},
 });
 
