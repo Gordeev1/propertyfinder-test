@@ -1,7 +1,7 @@
 {
 	"errors": {
 		"general": "Error has occurred",
-		"unknown": "Something went wrong"
+		"authFailed": "Failed to authorize, please try again"
 	},
 	"errorAlert": {
 		"cancelBtnLabel": "Cancel",
@@ -20,6 +20,11 @@
 			"description": "Press “Authorize” to unlock the secret app section!",
 			"authActionBtnLabel": "Authorize",
 			"logoutActionBtnLabel": "Logout"
+		},
+		"appSettings": {
+			"title": "App",
+			"theme": "Appearance",
+			"appVersion": "App version"
 		}
 	},
 	"profile": {

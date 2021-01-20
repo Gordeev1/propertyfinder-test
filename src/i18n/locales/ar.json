@@ -1,7 +1,7 @@
 {
 	"errors": {
 		"general": "حدث خطأ",
-		"unknown": "هناك خطأ ما"
+		"authFailed": "فشل التفويض ، يرجى المحاولة مرة أخرى"
 	},
 	"errorAlert": {
 		"cancelBtnLabel": "إلغاء",
@@ -20,6 +20,11 @@
 			"description": "اضغط على “تفويض” لفتح قسم التطبيق السري!",
 			"authActionBtnLabel": "تفويض",
 			"logoutActionBtnLabel": "تسجيل خروج"
+		},
+		"appSettings": {
+			"title": "تطبيق",
+			"theme": "مظهر خارجي",
+			"appVersion": "نسخة التطبيق"
 		}
 	},
 	"profile": {
