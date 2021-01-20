@@ -1,3 +1,4 @@
+import { I18nManager } from 'react-native';
 import { SearchBar } from 'react-native-elements';
 import styled from '@utils/styled-components';
 
@@ -15,6 +16,6 @@ export const ConfiguredSearchBar = styled(SearchBar).attrs((p) => ({
 	inputStyle: {
 		color: p.theme.colors.fontMain,
 		fontFamily: p.theme.fonts.main,
-		textAlign: 'left',
+		textAlign: I18nManager.isRTL ? 'right' : 'left',
 	},
 }))``;
