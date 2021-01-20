@@ -30,6 +30,7 @@
 		"sceneSubtitle": "مهمة الاختبار",
 		"authSettings": {
 			"title": "احصل على المزيد من الميزات!",
+			"titleAuthorized": "مرحبا بعودتك!",
 			"description": "اضغط على “تفويض” لفتح قسم التطبيق السري!",
 			"authActionBtnLabel": "تفويض",
 			"logoutActionBtnLabel": "تسجيل خروج"

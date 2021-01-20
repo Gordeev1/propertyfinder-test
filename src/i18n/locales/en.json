@@ -30,6 +30,7 @@
 		"sceneSubtitle": "Test assignment",
 		"authSettings": {
 			"title": "Get more features!",
+			"titleAuthorized": "Welcome back!",
 			"description": "Press “Authorize” to unlock the secret app section!",
 			"authActionBtnLabel": "Authorize",
 			"logoutActionBtnLabel": "Logout"

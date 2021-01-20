@@ -22,10 +22,13 @@ export default () => {
 	return (
 		<Container>
 			{authorized ? (
-				<PrimaryButton
-					title={translate('settings.authSettings.logoutActionBtnLabel')}
-					onPress={logout}
-				/>
+				<>
+					<Title>{translate('settings.authSettings.titleAuthorized')}</Title>
+					<PrimaryButton
+						title={translate('settings.authSettings.logoutActionBtnLabel')}
+						onPress={logout}
+					/>
+				</>
 			) : (
 				<>
 					<Title>{translate('settings.authSettings.title')}</Title>
