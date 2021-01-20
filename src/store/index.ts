@@ -13,9 +13,11 @@ import AsyncStorage from '@react-native-community/async-storage';
 import { isProductionBuild, PERSIST_TIMEOUT, CACHE_VERSION, PERSIST_KEY } from '@constants';
 import rootSaga from '@store/sagas';
 
+import movies from '@store/slices/movies';
 import user from '@store/slices/user';
 
 const rootReducer = combineReducers({
+	movies,
 	user,
 });
 

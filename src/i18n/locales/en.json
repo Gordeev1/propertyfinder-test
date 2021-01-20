@@ -1,6 +1,10 @@
 {
 	"errors": {
 		"general": "Error has occurred",
+		"unknown": "Something went wrong",
+		"moviesSeachFailed": "Failed to search movies, please check your connection and try again",
+		"movieLoadFailed": "Failed to load movie, please check your connection and try again",
+		"movieByIdNotFound": "Sorry, we unable to find info about this movie",
 		"authFailed": "Failed to authorize, please try again"
 	},
 	"errorAlert": {
