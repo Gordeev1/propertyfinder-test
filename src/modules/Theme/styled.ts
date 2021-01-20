@@ -7,11 +7,18 @@ import { THEME } from './enums';
 const colors = {
 	white: 'white',
 	black: 'black',
+	fontMain: 'black',
+	fontSecondary: 'grey',
+	border: 'rgb(201, 222, 244)',
+	shadow: 'rgba(0, 0, 0, 0.3)',
 	background: 'white',
 	activeTint: 'black',
 	inactiveTint: 'grey',
 	tabBar: 'white',
 	tabBarBorder: 'grey',
+	cardBackground: 'white',
+	segmentedControlTextColor: 'grey',
+	segmentedControlTintColor: 'white',
 };
 
 const fonts = {
