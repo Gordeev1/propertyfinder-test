@@ -22,7 +22,8 @@
 	},
 	"movieDetails": {
 		"genresSectionTitle": "الأنواع",
-		"descriptionSectionTitle": "وصف"
+		"descriptionSectionTitle": "وصف",
+		"openWebsiteBtnLabel": "عرض الموقع"
 	},
 	"settings": {
 		"sceneTitle": "Property Finder",

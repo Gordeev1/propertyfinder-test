@@ -22,7 +22,8 @@
 	},
 	"movieDetails": {
 		"genresSectionTitle": "Genres",
-		"descriptionSectionTitle": "Description"
+		"descriptionSectionTitle": "Description",
+		"openWebsiteBtnLabel": "View website"
 	},
 	"settings": {
 		"sceneTitle": "Property Finder",
