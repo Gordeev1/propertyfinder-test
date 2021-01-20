@@ -1,0 +1,10 @@
+{
+	"errors": {
+		"general": "حدث خطأ",
+		"unknown": "هناك خطأ ما"
+	},
+	"errorAlert": {
+		"cancelBtnLabel": "إلغاء",
+		"retryBtnLabel": "أعد المحاولة"
+	}
+}

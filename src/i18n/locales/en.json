@@ -1,0 +1,10 @@
+{
+	"errors": {
+		"general": "Error has occurred",
+		"unknown": "Something went wrong"
+	},
+	"errorAlert": {
+		"cancelBtnLabel": "Cancel",
+		"retryBtnLabel": "Retry"
+	}
+}
