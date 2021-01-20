@@ -16,6 +16,10 @@
 		"settings": "إعدادات",
 		"profile": "الملف الشخصي"
 	},
+	"searchMain": {
+		"headerInputPlaceholder": "ابدأ الكتابة لمشاهدة النتائج ...",
+		"noResultsFoundNote": "لم نعثر على أفلام مناسبة لمعلماتك. من فضلك ، وضح المعالم."
+	},
 	"settings": {
 		"sceneTitle": "Property Finder",
 		"sceneSubtitle": "مهمة الاختبار",

@@ -16,6 +16,10 @@
 		"settings": "Settings",
 		"profile": "Profile"
 	},
+	"searchMain": {
+		"headerInputPlaceholder": "Start typing to see results...",
+		"noResultsFoundNote": "We don't found movies suitable for your params. Please, clarify the params"
+	},
 	"settings": {
 		"sceneTitle": "Property Finder",
 		"sceneSubtitle": "Test assignment",
