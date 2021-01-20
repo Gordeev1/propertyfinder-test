@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Icon } from 'react-native-elements';
+import { Host } from 'react-native-portalize';
 import { translate } from '@i18n';
 import { selectUserAuthorized } from '@store/slices/user';
 import { SearchStackScreen } from '@scenes/search';
@@ -64,26 +65,28 @@ export default () => {
 
 	return (
 		<NavigationContainer ref={NavigationService.setNavigation}>
-			<ConfiguredTabsNavigator>
-				<Tabs.Screen
-					name={MAIN_TABS.Search}
-					component={SearchStackScreen}
-					options={searchTabOptions}
-				/>
-
-				<Tabs.Screen
-					name={MAIN_TABS.Settings}
-					component={SettingsScreen}
-					options={settingsTabOptions}
-				/>
-				{authorized && (
+			<Host>
+				<ConfiguredTabsNavigator>
 					<Tabs.Screen
-						name={MAIN_TABS.Profile}
-						component={ProfileScreen}
-						options={profileTabOptions}
+						name={MAIN_TABS.Search}
+						component={SearchStackScreen}
+						options={searchTabOptions}
 					/>
-				)}
-			</ConfiguredTabsNavigator>
+
+					<Tabs.Screen
+						name={MAIN_TABS.Settings}
+						component={SettingsScreen}
+						options={settingsTabOptions}
+					/>
+					{authorized && (
+						<Tabs.Screen
+							name={MAIN_TABS.Profile}
+							component={ProfileScreen}
+							options={profileTabOptions}
+						/>
+					)}
+				</ConfiguredTabsNavigator>
+			</Host>
 		</NavigationContainer>
 	);
 };
