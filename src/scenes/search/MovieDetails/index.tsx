@@ -8,6 +8,8 @@ import { IStoreState } from '@store';
 import { loadMovieDetails, selectMovieById, selectMovieLoadingById } from '@store/slices/movies';
 import FloatingStackHeader from '@components/FloatingStackHeader';
 import WebviewPanel from '@components/WebviewPanel';
+import ContainerCenter from '@components/ContainerCenter';
+import Spinner from '@components/Spinner';
 import { useToogleState } from '@hooks/useToogleState';
 import MovieDetailsInfo from '@modules/MovieDetails/MovieDetailsInfo';
 import MovieDetailsBackdrop from '@modules/MovieDetails/MovieDetailsBackdrop';
@@ -52,17 +54,29 @@ export default ({ route }: IProps) => {
 	return (
 		<>
 			<ConfiguredScrollView scrollEventThrottle={16} onScroll={onScroll}>
-				<MovieDetailsBackdrop backdrop={data.backdrop_path || data.poster_path} />
-				<MovieDetailsInfo loading={loading} onWebsiteOpenPress={openWebsite} {...data} />
-				{'homepage' in data && Boolean(data.homepage) && (
-					<WebviewPanel
-						isVisible={websiteVisible}
-						uri={data.homepage}
-						onClosed={closeWebsite}
-					/>
+				{loading || !data ? (
+					<ContainerCenter>
+						<Spinner paddingAreaSize={150} />
+					</ContainerCenter>
+				) : (
+					<>
+						<MovieDetailsBackdrop backdrop={data.backdrop_path || data.poster_path} />
+						<MovieDetailsInfo
+							loading={loading}
+							onWebsiteOpenPress={openWebsite}
+							{...data}
+						/>
+						{'homepage' in data && Boolean(data.homepage) && (
+							<WebviewPanel
+								isVisible={websiteVisible}
+								uri={data.homepage}
+								onClosed={closeWebsite}
+							/>
+						)}
+					</>
 				)}
 			</ConfiguredScrollView>
-			<FloatingStackHeader title={data.title} style={headerStyle} />
+			{data && <FloatingStackHeader title={data.title} style={headerStyle} />}
 		</>
 	);
 };

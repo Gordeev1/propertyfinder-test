@@ -86,10 +86,14 @@ export default memo(
 					)}
 				</SecondarySection>
 
-				<Section>
-					<SectionTitle>{translate('movieDetails.descriptionSectionTitle')}</SectionTitle>
-					<Description>{overview}</Description>
-				</Section>
+				{Boolean(overview) && (
+					<Section>
+						<SectionTitle>
+							{translate('movieDetails.descriptionSectionTitle')}
+						</SectionTitle>
+						<Description>{overview}</Description>
+					</Section>
+				)}
 
 				{genres && genres.length > 0 ? (
 					<Section>
