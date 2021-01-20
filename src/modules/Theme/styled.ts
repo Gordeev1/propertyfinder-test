@@ -65,11 +65,25 @@ const darkTheme = merge({}, baseTheme, {
 
 const customTheme = merge({}, baseTheme, {
 	colors: {
+		fontMain: 'rgb(136, 142, 149)',
+		fontSecondary: 'white',
+		border: 'rgb(78, 81, 86)',
+		shadow: 'rgba(136, 142, 149, 0.1)',
 		background: 'rgb(24, 25, 27)',
+		searchHeader: 'rgb(36, 37, 39)',
+		inputColor: 'rgb(30, 32, 35)',
+		stackHeader: 'rgb(36, 37, 39)',
+		stackHeaderBorder: 'rgb(36, 37, 39)',
 		activeTint: 'rgb(236, 117, 111)',
 		inactiveTint: 'rgb(136, 142, 149)',
 		tabBar: 'rgb(36, 37, 39)',
 		tabBarBorder: 'rgb(36, 37, 39)',
+		cardBackground: 'rgb(24, 25, 27)',
+		accent: 'rgb(236, 117, 111)',
+		movieDetailsOverlayFrom: 'rgba(24, 25, 27, 1)',
+		movieDetailsOverlayTo: 'rgba(24, 25, 27, 0)',
+		segmentedControlTextColor: 'white',
+		segmentedControlTintColor: 'white',
 	},
 });
 
