@@ -20,6 +20,10 @@
 		"headerInputPlaceholder": "Start typing to see results...",
 		"noResultsFoundNote": "We don't found movies suitable for your params. Please, clarify the params"
 	},
+	"movieDetails": {
+		"genresSectionTitle": "Genres",
+		"descriptionSectionTitle": "Description"
+	},
 	"settings": {
 		"sceneTitle": "Property Finder",
 		"sceneSubtitle": "Test assignment",

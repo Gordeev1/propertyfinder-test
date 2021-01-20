@@ -20,6 +20,10 @@
 		"headerInputPlaceholder": "ابدأ الكتابة لمشاهدة النتائج ...",
 		"noResultsFoundNote": "لم نعثر على أفلام مناسبة لمعلماتك. من فضلك ، وضح المعالم."
 	},
+	"movieDetails": {
+		"genresSectionTitle": "الأنواع",
+		"descriptionSectionTitle": "وصف"
+	},
 	"settings": {
 		"sceneTitle": "Property Finder",
 		"sceneSubtitle": "مهمة الاختبار",

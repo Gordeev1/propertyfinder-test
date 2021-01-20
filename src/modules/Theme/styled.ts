@@ -22,6 +22,8 @@ const colors = {
 	tabBarBorder: 'grey',
 	cardBackground: 'white',
 	accent: 'rgb(1, 36, 255)',
+	movieDetailsOverlayFrom: 'rgba(255, 255, 255, 1)',
+	movieDetailsOverlayTo: 'rgba(255, 255, 255, 0)',
 	segmentedControlTextColor: 'grey',
 	segmentedControlTintColor: 'white',
 };
