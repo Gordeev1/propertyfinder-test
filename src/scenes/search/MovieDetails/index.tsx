@@ -54,7 +54,7 @@ export default ({ route }: IProps) => {
 	return (
 		<>
 			<ConfiguredScrollView scrollEventThrottle={16} onScroll={onScroll}>
-				{loading || !data ? (
+				{loading && !data ? (
 					<ContainerCenter>
 						<Spinner paddingAreaSize={150} />
 					</ContainerCenter>
