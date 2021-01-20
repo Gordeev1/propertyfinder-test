@@ -7,6 +7,11 @@ import { THEME } from './enums';
 const colors = {
 	white: 'white',
 	black: 'black',
+	background: 'white',
+	activeTint: 'black',
+	inactiveTint: 'grey',
+	tabBar: 'white',
+	tabBarBorder: 'grey',
 };
 
 const fonts = {
@@ -21,9 +26,25 @@ const baseTheme = {
 
 const lightTheme = { ...baseTheme };
 
-const darkTheme = merge({}, baseTheme, {});
+const darkTheme = merge({}, baseTheme, {
+	colors: {
+		background: 'rgb(0, 0, 0)',
+		activeTint: 'rgb(254, 254, 254)',
+		inactiveTint: 'rgb(89, 94, 98)',
+		tabBar: 'rgb(19, 21, 25)',
+		tabBarBorder: 'rgb(22, 23, 29)',
+	},
+});
 
-const customTheme = merge({}, baseTheme, {});
+const customTheme = merge({}, baseTheme, {
+	colors: {
+		background: 'rgb(24, 25, 27)',
+		activeTint: 'rgb(236, 117, 111)',
+		inactiveTint: 'rgb(136, 142, 149)',
+		tabBar: 'rgb(36, 37, 39)',
+		tabBarBorder: 'rgb(36, 37, 39)',
+	},
+});
 
 export const themes = {
 	[THEME.Light]: lightTheme,

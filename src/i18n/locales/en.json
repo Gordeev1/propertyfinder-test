@@ -6,5 +6,10 @@
 	"errorAlert": {
 		"cancelBtnLabel": "Cancel",
 		"retryBtnLabel": "Retry"
+	},
+	"tabs": {
+		"search": "Search",
+		"settings": "Settings",
+		"profile": "Profile"
 	}
 }
