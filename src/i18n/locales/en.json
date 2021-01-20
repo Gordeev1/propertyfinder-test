@@ -11,5 +11,19 @@
 		"search": "Search",
 		"settings": "Settings",
 		"profile": "Profile"
+	},
+	"settings": {
+		"sceneTitle": "Property Finder",
+		"sceneSubtitle": "Test assignment",
+		"authSettings": {
+			"title": "Get more features!",
+			"description": "Press “Authorize” to unlock the secret app section!",
+			"authActionBtnLabel": "Authorize",
+			"logoutActionBtnLabel": "Logout"
+		}
+	},
+	"profile": {
+		"sceneTitle": "Congratulations!",
+		"sceneSubtitle": "This section is available only for authorized users ;)"
 	}
 }

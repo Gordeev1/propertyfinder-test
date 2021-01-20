@@ -1,8 +1,10 @@
 import React, { useMemo } from 'react';
+import { useSelector } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Icon } from 'react-native-elements';
 import { translate } from '@i18n';
+import { selectUserAuthorized } from '@store/slices/user';
 import { SearchStackScreen } from '@scenes/search';
 import SettingsScreen from '@scenes/Settings';
 import ProfileScreen from '@scenes/Profile';
@@ -31,7 +33,7 @@ const ConfiguredTabsNavigator = styled(Tabs.Navigator).attrs((p) => ({
 }))``;
 
 export default () => {
-	const authorized = false;
+	const authorized = useSelector(selectUserAuthorized);
 
 	const searchTabOptions = useMemo(
 		() => ({

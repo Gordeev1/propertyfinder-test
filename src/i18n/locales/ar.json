@@ -11,5 +11,19 @@
 		"search": "بحث",
 		"settings": "إعدادات",
 		"profile": "الملف الشخصي"
+	},
+	"settings": {
+		"sceneTitle": "Property Finder",
+		"sceneSubtitle": "مهمة الاختبار",
+		"authSettings": {
+			"title": "احصل على المزيد من الميزات!",
+			"description": "اضغط على “تفويض” لفتح قسم التطبيق السري!",
+			"authActionBtnLabel": "تفويض",
+			"logoutActionBtnLabel": "تسجيل خروج"
+		}
+	},
+	"profile": {
+		"sceneTitle": "تهانينا!",
+		"sceneSubtitle": "هذا القسم متاح فقط للمستخدمين المصرح لهم"
 	}
 }

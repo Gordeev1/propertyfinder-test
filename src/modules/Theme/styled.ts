@@ -17,6 +17,7 @@ const colors = {
 	tabBar: 'white',
 	tabBarBorder: 'grey',
 	cardBackground: 'white',
+	accent: 'rgb(1, 36, 255)',
 	segmentedControlTextColor: 'grey',
 	segmentedControlTintColor: 'white',
 };
