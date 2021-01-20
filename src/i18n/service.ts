@@ -1,4 +1,5 @@
 import { I18nManager } from 'react-native';
+import RNRestart from 'react-native-restart';
 import i18n, { TranslateOptions } from 'i18n-js';
 import memoize from 'lodash/memoize';
 import { Locales } from './enums';
@@ -49,6 +50,8 @@ class I18nService {
 	update({ language, isRTL }: I18nServiceState) {
 		if ((isRTL && !I18nManager.isRTL) || (!isRTL && I18nManager.isRTL)) {
 			I18nManager.forceRTL(isRTL);
+			// TODO: find a more elegant way of the ui direction update
+			return RNRestart.Restart();
 		}
 
 		if (language !== this.state.language) {
