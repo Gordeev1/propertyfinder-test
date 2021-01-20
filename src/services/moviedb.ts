@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { MOVIEDB_BASE_URL, MOVIEDB_API_KEY } from '@constants/envs';
 import { ISearchMoviesResponse, IMovie } from '@LTypes/api/movies';
+import I18nService from '@i18n/service';
 
 class MovieDBService {
 	readonly client = axios.create({
@@ -9,7 +10,11 @@ class MovieDBService {
 
 	constructor() {
 		this.client.interceptors.request.use(async (config) => {
-			config.params = { api_key: MOVIEDB_API_KEY, ...(config.params || {}) };
+			config.params = {
+				api_key: MOVIEDB_API_KEY,
+				language: I18nService.client.locale,
+				...(config.params || {}),
+			};
 			return config;
 		}, Promise.reject);
 	}
