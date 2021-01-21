@@ -42,7 +42,7 @@ export function DeviceLanguageProvider({ children }: PropsWithChildren<{}>) {
 	);
 }
 
-const AppLanguageContext = createContext(defaultLanguageState);
+export const AppLanguageContext = createContext(defaultLanguageState);
 
 export function AppLanguageProvider({ children }: PropsWithChildren<{}>) {
 	const deviceLanguage = useContext(DeviceLanguageContext);
