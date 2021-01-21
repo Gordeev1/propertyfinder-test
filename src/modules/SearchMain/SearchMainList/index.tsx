@@ -44,7 +44,9 @@ export default memo((props: IProps) => {
 	);
 
 	const emptyPlaceholder = hasSearchQuery ? (
-		<EmptyNote>{translate('searchMain.noResultsFoundNote')}</EmptyNote>
+		<EmptyNote testID="searchMain.noResultsFoundNote">
+			{translate('searchMain.noResultsFoundNote')}
+		</EmptyNote>
 	) : undefined;
 
 	return (
