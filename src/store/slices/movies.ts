@@ -79,7 +79,7 @@ export const loadMovieDetails = (id: string): AppThunk => async (dispatch) => {
 		showErrorMessage({
 			message: is404
 				? translate('errors.movieByIdNotFound')
-				: translate('errors.movieByIdNotFound'),
+				: translate('errors.movieLoadFailed'),
 			onRetryPress: is404 ? undefined : () => dispatch(loadMovieDetails(id)),
 		});
 
