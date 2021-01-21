@@ -8,6 +8,7 @@ import { Container } from './styled';
 export default () => (
 	<Container>
 		<SceneTitleSection
+			testID="settings.sceneTitleSection"
 			title={translate('settings.sceneTitle')}
 			subtitle={translate('settings.sceneSubtitle')}
 		/>
