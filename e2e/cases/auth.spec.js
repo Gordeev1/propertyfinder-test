@@ -6,10 +6,11 @@ describe('Auth', () => {
 	beforeEach(async () => {
 		await device.launchApp({ newInstance: true, delete: true });
 		await element(by.id('tabbar.settings')).tap();
-		await element(by.id('settings.authBtn')).tap();
 	});
 
 	it('Set auth state when "Authorize" button press at settings screen', async () => {
+		await element(by.id('settings.authBtn')).tap();
+
 		await waitFor(element(by.id('tabbar.profile')))
 			.toBeVisible()
 			.withTimeout(authTimeout);
@@ -17,6 +18,7 @@ describe('Auth', () => {
 
 	describe('authorized', () => {
 		beforeEach(async () => {
+			await element(by.id('settings.authBtn')).tap();
 			await waitFor(element(by.id('tabbar.profile')))
 				.toBeVisible()
 				.withTimeout(authTimeout);
