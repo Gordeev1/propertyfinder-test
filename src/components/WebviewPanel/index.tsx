@@ -1,12 +1,13 @@
 import React, { memo } from 'react';
+import { ViewProps } from 'react-native';
 import Panel, { IPanelProps } from '@components/Panel';
 import { Header, ConfiguredWebView, ConfiguredButton, ConfiguredIcon } from './styled';
 
-interface IProps extends IPanelProps {
+interface IProps extends IPanelProps, Pick<ViewProps, 'testID'> {
 	uri: string;
 }
 
-export default memo(({ uri, onClosed = () => {}, ...props }: IProps) => (
+export default memo(({ testID, uri, onClosed = () => {}, ...props }: IProps) => (
 	<Panel
 		adjustToContentHeight
 		onClosed={onClosed}
@@ -19,6 +20,10 @@ export default memo(({ uri, onClosed = () => {}, ...props }: IProps) => (
 		}
 		{...props}
 	>
-		<ConfiguredWebView showsHorizontalScrollIndicator={false} source={{ uri }} />
+		<ConfiguredWebView
+			testID={testID}
+			showsHorizontalScrollIndicator={false}
+			source={{ uri }}
+		/>
 	</Panel>
 ));

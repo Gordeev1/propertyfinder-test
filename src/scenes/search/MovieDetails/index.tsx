@@ -53,7 +53,11 @@ export default ({ route }: IProps) => {
 
 	return (
 		<>
-			<ConfiguredScrollView scrollEventThrottle={16} onScroll={onScroll}>
+			<ConfiguredScrollView
+				testID="movieDetails.scrollView"
+				scrollEventThrottle={16}
+				onScroll={onScroll}
+			>
 				{!data ? (
 					<ContainerCenter>
 						<Spinner paddingAreaSize={150} />
@@ -68,6 +72,7 @@ export default ({ route }: IProps) => {
 						/>
 						{'homepage' in data && Boolean(data.homepage) && (
 							<WebviewPanel
+								testID="movieDetails.webview"
 								isVisible={websiteVisible}
 								uri={data.homepage}
 								onClosed={closeWebsite}
@@ -76,7 +81,13 @@ export default ({ route }: IProps) => {
 					</>
 				)}
 			</ConfiguredScrollView>
-			{data && <FloatingStackHeader title={data.title} style={headerStyle} />}
+			{data && (
+				<FloatingStackHeader
+					testID="movieDetails.floatingHeader"
+					title={data.title}
+					style={headerStyle}
+				/>
+			)}
 		</>
 	);
 };

@@ -107,6 +107,7 @@ export default memo(
 				{Boolean(homepage) && (
 					<Section>
 						<PrimaryButton
+							testID="movieDetails.openWebsiteBtn"
 							type="outline"
 							icon={<Icon name="language" size={18} />}
 							title={translate('movieDetails.openWebsiteBtnLabel')}
