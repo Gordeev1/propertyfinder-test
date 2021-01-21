@@ -21,18 +21,26 @@ npx pod-install
 
 ## E2E
 
--   Debug mode
+-   Make sure you have [Detox setup](https://github.com/wix/Detox/blob/master/docs/README.md)
+-   Make sure you have `iPhone 11 Pro Max` simulator installed
+-   Prepare build for test
 
 ```
-npm run e2e:build:ios / e2e:build:android
-npm run e2e:test:ios / e2e:test:android
+// Debug
+npm run e2e:build:ios
+
+// Release
+npm run e2e:build-release:ios
 ```
 
--   Release mode
+-   Run tests
 
 ```
-npm run e2e:build-release:ios / e2e:build-release:android
-npm run e2e:test-release:ios / e2e:test-release:android
+// Debug
+npm run e2e:test:ios
+
+// Release
+npm run e2e:test-release:ios
 ```
 
 ## Supported deeplinks formats
