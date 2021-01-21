@@ -25,6 +25,7 @@ export default () => {
 				<>
 					<Title>{translate('settings.authSettings.titleAuthorized')}</Title>
 					<PrimaryButton
+						testID="settings.logoutBtn"
 						title={translate('settings.authSettings.logoutActionBtnLabel')}
 						onPress={logout}
 					/>
@@ -34,6 +35,7 @@ export default () => {
 					<Title>{translate('settings.authSettings.title')}</Title>
 					<Description>{translate('settings.authSettings.description')}</Description>
 					<PrimaryButton
+						testID="settings.authBtn"
 						title={translate('settings.authSettings.authActionBtnLabel')}
 						loading={authorization}
 						disabled={authorization}
