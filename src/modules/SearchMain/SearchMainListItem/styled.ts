@@ -7,6 +7,8 @@ export const ConfiguredListItem = styled(ListItem).attrs((p) => ({
 	containerStyle: {
 		backgroundColor: p.theme.colors.background,
 		borderColor: p.theme.colors.inactiveTint,
+		paddingLeft: p.theme.insets.left || undefined,
+		paddingRight: p.theme.insets.right || undefined,
 	},
 }))``;
 

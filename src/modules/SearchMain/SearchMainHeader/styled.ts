@@ -4,7 +4,9 @@ import styled from '@utils/styled-components';
 
 export const ConfiguredSearchBar = styled(SearchBar).attrs((p) => ({
 	containerStyle: {
-		paddingTop: p.theme.insets.top,
+		paddingTop: p.theme.insets.top || undefined,
+		paddingLeft: p.theme.insets.left || undefined,
+		paddingRight: p.theme.insets.right || undefined,
 		backgroundColor: p.theme.colors.searchHeader,
 		borderBottomColor: p.theme.colors.stackHeaderBorder,
 	},
