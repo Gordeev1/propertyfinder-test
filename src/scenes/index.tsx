@@ -7,13 +7,13 @@ import { Host } from 'react-native-portalize';
 import { translate } from '@i18n';
 import { selectUserAuthorized } from '@store/slices/user';
 import { SearchStackScreen } from '@scenes/search';
+import { SEARCH_SCENES } from '@scenes/search/enums';
 import SettingsScreen from '@scenes/Settings';
 import ProfileScreen from '@scenes/Profile';
 import NavigationService from '@services/navigation';
 import styled from '@utils/styled-components';
 import { APP_SCHEME } from '@constants';
 import { MAIN_TABS } from './enums';
-import { SEARCH_SCENES } from './search/enums';
 
 interface ITabBarIconProps {
 	focused: boolean;
