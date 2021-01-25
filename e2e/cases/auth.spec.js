@@ -31,8 +31,6 @@ describe('Auth', () => {
 		});
 
 		it('Reset auth state when "Logout" button press on settings screen', async () => {
-			await element(by.id('tabbar.settings')).tap();
-
 			await element(by.id('settings.logoutBtn')).tap();
 
 			await expect(element(by.id('tabbar.profile'))).not.toBeVisible();
