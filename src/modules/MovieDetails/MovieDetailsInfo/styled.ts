@@ -10,7 +10,8 @@ const sectionMargin = css`
 `;
 
 export const Container = styled(View)`
-	padding-horizontal: ${scale(30)};
+	padding-left: ${(p) => p.theme.insets.left + scale(30)(p)};
+	padding-right: ${(p) => p.theme.insets.right + scale(30)(p)};
 `;
 
 export const MainSection = styled(View)`
